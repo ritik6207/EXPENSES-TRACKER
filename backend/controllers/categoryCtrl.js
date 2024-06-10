@@ -44,7 +44,7 @@ const categoryController = {
 
   //! update
   update: asyncHandler(async (req, res) => {
-    const categoryId = req.params;
+    const { categoryId } = req.params;
     const { type, name } = req.body;
     const normalizedName = name.toLowerCase();
     const category = await Category.findById(categoryId);
