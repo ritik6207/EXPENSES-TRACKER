@@ -42,9 +42,9 @@ const categoryController = {
     res.status(200).json(categories);
   }),
 
-  //! update
+  // ! update
   update: asyncHandler(async (req, res) => {
-    const categoryId = req.params;
+    const { categoryId } = req.params;
     const { type, name } = req.body;
     const normalizedName = name.toLowerCase();
     const category = await Category.findById(categoryId);
@@ -68,6 +68,7 @@ const categoryController = {
     }
     res.json(updatedCategory);
   }),
+
 
   //! delete
   delete: asyncHandler(async (req, res) => {
