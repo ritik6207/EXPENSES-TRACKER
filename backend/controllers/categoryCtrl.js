@@ -78,7 +78,7 @@ const categoryController = {
       await Transaction.updateMany(
         {
           user: req.user,
-          category: category.name,
+          category: category._id,
         },
         { $set: { category: defaultCategory } }
       );

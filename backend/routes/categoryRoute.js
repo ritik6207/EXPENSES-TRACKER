@@ -18,13 +18,13 @@ categoryRouter.get(
 );
 //! update
 categoryRouter.put(
-  "/api/v1/categories/update/:id",
+  "/api/v1/categories/update/:categoryId",
   isAuthenticated,
   categoryController.update
 );
 //! delete
 categoryRouter.delete(
-  "/api/v1/categories/delete/:id",
+  "/api/v1/categories/delete/:categoryId",
   isAuthenticated,
   categoryController.delete
 );
