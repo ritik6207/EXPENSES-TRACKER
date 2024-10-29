@@ -42,7 +42,7 @@ const categoryController = {
     res.status(200).json(categories);
   }),
 
-  //! update
+  // ! update
   update: asyncHandler(async (req, res) => {
     const { categoryId } = req.params;
     const { type, name } = req.body;
@@ -77,6 +77,7 @@ const categoryController = {
 
     res.json(updatedCategory);
   }),
+
 
   //! delete
   delete: asyncHandler(async (req, res) => {
